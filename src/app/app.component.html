@@ -1,0 +1,11 @@
+<app-toolbar></app-toolbar>
+<div class="main">
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="{{mode}}">
+      <app-navigation></app-navigation>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

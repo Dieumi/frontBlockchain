@@ -1,0 +1,28 @@
+<div class="auth-dialog">
+ 
+      <form [formGroup]="connexionForm" (ngSubmit)="submitConnexion()" fxFlex fxLayout="column" fxLayoutAlign="space-between center">
+        <div class="dialog-content">
+          <h1 mat-dialog-title>Connectez-vous</h1>
+          <div mat-dialog-content fxLayout="column">
+            <mat-form-field>
+                <input matInput required type="text" formControlName="username" placeholder="Email">
+                <mat-error *ngIf="connexionForm.get('username').hasError('required')">L'email est obligatoire</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput required [type]="isPasswordVisible ? 'text' : 'password'" formControlName="password" placeholder="Mot de passe">
+                <button mat-button matSuffix (click)="togglePasswordVisibilty()">
+                    <mat-icon *ngIf="isPasswordVisible">visibility</mat-icon>
+                    <mat-icon *ngIf="!isPasswordVisible">visibility_off</mat-icon>
+                </button>
+                <mat-error *ngIf="connexionForm.get('password').hasError('required')">Le mot de passe est obligatoire</mat-error>
+            </mat-form-field>
+            <a href="#" class="link forgot-password">Mot de passe oublié</a>
+          </div>
+        </div>
+        <div class="dialog-actions" mat-dialog-actions fxLayoutAlign="space-around center">
+            <button mat-stroked-button >Annuler</button>
+            <button mat-flat-button color="primary" type="submit">Valider</button>
+        </div>
+      </form>
+
+</div>

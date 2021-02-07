@@ -1,0 +1,14 @@
+.auth-dialog {
+    min-height: 360px;
+    max-width: 480px;
+    .dialog-content{
+        width: 100%;
+        .forgot-password {
+            text-align: right;
+        }
+    }
+    .dialog-actions {
+        width: 100%;
+        margin-top: 16px;
+    }
+}

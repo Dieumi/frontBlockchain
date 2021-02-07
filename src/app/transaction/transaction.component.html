@@ -1,0 +1,36 @@
+<div class="transaction">
+  <div class="overlay"   *ngIf="(loading | async)">
+  <div class="center">
+    <mat-progress-spinner diameter=50 
+	                      mode="indeterminate"
+                        *ngIf="(loading | async)"
+						  color="accent">
+	</mat-progress-spinner> 
+</div>
+  </div>
+  <div class="formTransaction">
+    <form [formGroup]="transactionForm" (ngSubmit)="submitTransaction()" fxFlex fxLayout="column" fxLayoutAlign="space-between center">
+      <div class="dialog-content">
+        <h1 mat-dialog-title>Solde : {{solde}} LC</h1>
+        <div mat-dialog-content fxLayout="column">
+          <mat-form-field>
+              <input matInput required type="text" formControlName="amountToSend" placeholder="Saisir montant a transferer">
+              <mat-error *ngIf="transactionForm.get('amountToSend').hasError('required')">Le montant est obligatoire</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+          <mat-label>Recherche de beneficiaire</mat-label>
+          <input required type="text" matInput formControlName="username" [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option.username}}       
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        </div>
+      </div>
+      <div class="dialog-actions" mat-dialog-actions fxLayoutAlign="space-around center">
+          <button mat-flat-button color="primary"  [disabled]="!transactionForm.valid" type="submit">Valider</button>
+      </div>
+    </form>
+  </div>
+</div>

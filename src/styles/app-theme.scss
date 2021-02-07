@@ -1,0 +1,52 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// https://material.io/tools/color/#!/?view.left=1&view.right=0&primary.color=0097A7
+
+$primary: mat-palette($mat-teal, 700); // cyan 700
+
+$accent:  mat-palette($mat-orange, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$theme: mat-light-theme($primary, $accent, $warn);
+
+// Include theme styles for core and each component used in your app.
+@mixin angular-material-theme($theme) {
+    @include mat-core-theme($theme);
+    @include mat-autocomplete-theme($theme);
+    @include mat-button-theme($theme);
+    @include mat-button-toggle-theme($theme);
+    @include mat-card-theme($theme);
+    @include mat-checkbox-theme($theme);
+    @include mat-chips-theme($theme);
+    @include mat-datepicker-theme($theme);
+    @include mat-dialog-theme($theme);
+    @include mat-grid-list-theme($theme);
+    @include mat-icon-theme($theme);
+    @include mat-input-theme($theme);
+    @include mat-list-theme($theme);
+    @include mat-menu-theme($theme);
+    @include mat-progress-bar-theme($theme);
+    @include mat-progress-spinner-theme($theme);
+    @include mat-radio-theme($theme);
+    @include mat-select-theme($theme);
+    @include mat-sidenav-theme($theme);
+    @include mat-slide-toggle-theme($theme);
+    @include mat-slider-theme($theme);
+    @include mat-tabs-theme($theme);
+    @include mat-toolbar-theme($theme);
+    @include mat-tooltip-theme($theme);
+  }
+
+
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($theme);

@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+@import '../../../styles/app-theme.scss';
+
+.search-input {
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    .mat-form-field-flex {
+        //background-color: mat-color($primary, lighter, 1) !important;
+    }
+    
+}

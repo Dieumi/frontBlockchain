@@ -1,0 +1,37 @@
+<mat-list class="navigation">
+    <mat-list-item *ngIf="isUserConnected()">
+      <h3 mat-line>{{getUserName()}}</h3>
+      <p mat-line>{{getUserEmail()}}</p>
+    </mat-list-item>
+    <mat-list-item routerLink="/">
+        <mat-icon matListIcon>home</mat-icon>
+        <h4 mat-line>Accueil</h4> 
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <h3 mat-subheader>Mon portefeuille</h3>
+    
+    <mat-list-item routerLink="wallet">
+        <mat-icon matListIcon>money</mat-icon>
+        <h4 mat-line>Mon solde</h4> 
+    </mat-list-item>
+    <mat-list-item routerLink="transaction">
+        <mat-icon matListIcon>send</mat-icon>
+        <h4 mat-line>Faire une transaction</h4>
+    </mat-list-item>
+    <mat-list-item routerLink="history"> 
+        <mat-icon matListIcon>history</mat-icon>
+        <h4 mat-line>Mon historique</h4>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+ 
+    <mat-list-item routerLink="cagnotte">
+        <mat-icon matListIcon>casino</mat-icon>
+        <h4 mat-line>Cagnotte</h4>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item routerLink="formation">
+        <mat-icon matListIcon>library_books</mat-icon>
+        <h4 mat-line>Catalogue de formation</h4>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>

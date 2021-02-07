@@ -1,0 +1,9 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+mat-sidenav-container {
+    height: 100%;
+    mat-sidenav {
+        width: 256px;
+        
+    }
+}

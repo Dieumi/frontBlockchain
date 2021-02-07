@@ -1,0 +1,87 @@
+@import '~@angular/material/theming';
+@import '../../styles/app-theme.scss';
+.welcome {
+
+    .app-link {
+        position: absolute;
+        width: 100%;
+        margin: auto;
+        top: 380px;
+        .mat-raised-button {
+            span {
+                margin-left: 4px;
+            }
+        }
+    }
+
+    .features {
+        height: auto;
+        background-color: mat-color($primary, lighter, 1);
+        padding: 64px;
+        .feature {
+            width: 400px; // set with media screen
+
+            .icon {
+                margin-top: 16px;
+                margin-bottom: 32px;
+                border-radius: 50%;
+                width: 192px;
+                height: 192px;
+                background-color: mat-color($primary);
+                color: mat-color($primary, lighter, 1);
+                .mat-icon {
+                    font-size: 64px;
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 500 !important;
+                line-height: 32px;
+                color: black;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .recipes {
+        height: auto;
+        padding: 64px;
+
+        .recipe-text {
+            width: 480px;
+            h2 {
+                color: mat-color($primary);
+                font-size: 32px;
+            }
+            p {
+                font-size: 16px;
+                font-weight: 500 !important;
+                line-height: 32px;
+                color: black;
+                opacity: 0.5;
+            }
+        }
+
+
+        .recipe-img {
+            width: 600px;
+            height: 600px;
+            img {
+                width: 600px;
+                height: 600px;
+                object-fit: cover;
+                border-radius: 4px;
+            }
+        }
+
+    }
+
+    footer {
+        background-color: mat-color($primary);
+        color: white;
+        height: 92px;
+    }
+}

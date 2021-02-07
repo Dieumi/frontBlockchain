@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+@import '../../../styles/app-theme.scss';
+
+.navigation {
+    mat-list-item {
+        cursor: pointer;
+        &:hover {
+            background-color: mat-color($primary, lighter, 1) !important;                  
+        }
+    }
+}
