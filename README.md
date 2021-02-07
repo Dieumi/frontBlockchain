@@ -12,6 +12,17 @@
     ***S'inscrire a une formation***,
     ***Publier une formation***
 
+## TODO : 
+    * Terminer les ecrans actuelles afin de correspondre aux maquettes
+    * Ecran Wow
+    * Ajouter les graphiques montrants l'evolution du solde
+    * Ecran Cagnotte
+    * Ecran Catalogue de formation
+    * Ecran Admin : 
+        *Creation utilisateur & portefeuille
+        *Creation d'une cagnotte
+        *Creation d'une formation
+
 # MvpFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
