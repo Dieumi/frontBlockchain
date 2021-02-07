@@ -1,17 +1,17 @@
 ## LevioCoin Front
 
-Feature disponible : 
+## Feature disponible : 
     ***Connexion***
-    ***Consulter le solde***
-    ***Envoyer des levio Coin***
-    ***Consulter son historique***
+    ***Consulter le solde***,
+    ***Envoyer des levio Coin***,
+    ***Consulter son historique***,
 
-Feature en construction : 
-    ***Participer a une cagnotte***
-    ***Creation d'une cagnotte***
-    ***S'inscrire a une formation***
+## Feature en construction : 
+    ***Participer a une cagnotte***,
+    ***Creation d'une cagnotte***,
+    ***S'inscrire a une formation***,
     ***Publier une formation***
-    
+
 # MvpFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
