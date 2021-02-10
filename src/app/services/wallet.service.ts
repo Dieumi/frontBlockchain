@@ -36,7 +36,7 @@ export class WalletService implements WalletServiceInterface{
   
   }
   getHistory(walletId: string) {
-    this.http.get<any>("http://localhost:8080/wallet/transaction/"+walletId).subscribe(response=>{
+    this.http.get<any>("http://100.24.118.16:8080/wallet/transaction/"+walletId).subscribe(response=>{
     console.log("response"+JSON.stringify(response))
     this.listTransaction$.next(response)
 
@@ -48,7 +48,7 @@ export class WalletService implements WalletServiceInterface{
       levioCoin:amount
     }
     this.loading$.next(true);
-    this.http.post<any>("http://localhost:8080/sendTransaction",body).subscribe(response=>{
+    this.http.post<any>("http://100.24.118.16:8080/sendTransaction",body).subscribe(response=>{
 
       this.transaction$.next(true)
       this.loading$.next(false);
@@ -61,7 +61,7 @@ export class WalletService implements WalletServiceInterface{
   }
 
   getWallet(): void{
-  this.http.get<any>("http://localhost:8080/wallet").subscribe(response=>{
+  this.http.get<any>("http://100.24.118.16:8080/wallet").subscribe(response=>{
     console.log("response"+JSON.stringify(response))
     this.wallet=response;
     this.getHistory(this.wallet.id);

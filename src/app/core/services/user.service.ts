@@ -81,7 +81,7 @@ export class UserService implements UserServiceInterface{
       username: login,
       password: password,
     }  
-    this.http.post<any>("http://localhost:8080/authenticate", body).subscribe(response => {
+    this.http.post<any>("http://100.24.118.16:8080/authenticate", body).subscribe(response => {
       const user:User = response.user;
    
       localStorage.setItem("user", JSON.stringify(user));   
@@ -140,7 +140,7 @@ export class UserService implements UserServiceInterface{
   }
 
   getListOfUsers(): void{
-    this.http.get<any>("http://localhost:8080/listUser").subscribe(response=>{
+    this.http.get<any>("http://100.24.118.16:8080/listUser").subscribe(response=>{
       console.log("user"+JSON.stringify(response))
       this.listOfUser$.next(response)
   
